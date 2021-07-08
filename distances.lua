@@ -2,7 +2,7 @@ local minimum_distance;
 do
     local math_floor = math.floor;
 
-    -- time complexity : O(n*logn)
+    -- time complexity avg case : O(n*logn)
     function minimum_distance(points) -- wanted to divide and conquer before but..
         local smallest = 2 ^ 1024; -- a magic number for the maximum number that can be.
         local n_points = #points;
