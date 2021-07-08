@@ -63,7 +63,6 @@ function expression_tree:to_number() -- recursivly visit each node in the graph.
     end
 
     if (operated_token._token_type == enum_token_types._sum) then
-         --todo
         return sum_all(self._left:to_number());
     elseif (operated_token._token_type == enum_token_types._add) then
         return self._left:to_number() + self._right:to_number();
