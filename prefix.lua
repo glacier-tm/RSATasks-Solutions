@@ -115,7 +115,7 @@ function tokenizer:tokenize()
     end
 end
 
-local function eval(str)
+local eval = function(str)
     local _tokenizer_job = tokenizer.init(str);
     _tokenizer_job:tokenize();
     local tokens = _tokenizer_job:get_tokens();
