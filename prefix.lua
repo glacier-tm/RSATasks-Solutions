@@ -116,9 +116,9 @@ function tokenizer:tokenize()
 end
 
 local eval = function(str)
-    local _tokenizer_job = tokenizer.init(str);
-    _tokenizer_job:tokenize();
-    local tokens = _tokenizer_job:get_tokens();
+    local tokenizer_job = tokenizer.init(str);
+    tokenizer_job:tokenize();
+    local tokens = tokenizer_job:get_tokens();
     local root = expression_tree.init();
     return root:build_tree(tokens):to_number();
 end
