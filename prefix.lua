@@ -89,7 +89,7 @@ tokenizer.__index = tokenizer;
 
 function tokenizer.init(str)
     return setmetatable({
-        _tokens = table.create(#str, nil); -- initial re-hashings.
+        _tokens = { unpack({}, 1, #str) }; --table.create(#str, nil); -- initial re-hashings.
         _to_tokenize = str;
     }, tokenizer);
 end
