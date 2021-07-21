@@ -1,1 +1,4 @@
+-- problem name : distances between pairs of points in euclidiean space
 -- heruistic & divide and conquer in order to acheive 0(n * logn) runtime time complexity.
+-- proccess : we take a table of length N, we divide it into sub-arrays (lets say L and R), since our function returns the distance between two points in our sub arrays we take the minimum between both left and right sides so we can find points that are less far from the middle, Once we found we start to brute force for each point to find the minimum distance , This will take O(n).
+-- summary : 
